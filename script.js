@@ -2,21 +2,21 @@ const CANVAS__WIDTH = 1024;
 const CANVAS__HEIGHT = 768;
 let GLOBAL_INTERVAL = 0;
 
-import Player from "./data/assets/Player.js";
+import Player from './data/assets/Player.js';
 
-const canvas = document.querySelector("canvas");
+const canvas = document.querySelector('canvas');
 canvas.width = CANVAS__WIDTH;
 canvas.height = CANVAS__HEIGHT;
 
-const ctx = canvas.getContext("2d");
-ctx.fillStyle = "white";
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = 'white';
 
 const player = new Player({
-  position: { x: 50, y: 50 },
-  collisionRadius: 50,
-  textureScale: 1,
-  modelName: "viking-3",
-  name: "gigi",
+  position: { x: 300, y: 400 },
+  collisionRadius: 40,
+  textureScale: 0.55,
+  modelName: 'viking-1',
+  name: 'Nechifor',
 });
 
 console.log(player);

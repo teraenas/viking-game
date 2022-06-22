@@ -1,5 +1,5 @@
-import { CONTEXT } from "../../script.js";
-import Model from "../textures/Models.js";
+import { CONTEXT } from '../../script.js';
+import Model from '../textures/Models.js';
 
 export default class Actor {
   constructor({
@@ -13,7 +13,8 @@ export default class Actor {
     this.y = position.y;
     this.collisionRadius = collisionRadius;
     this.textureScale = textureScale;
-    this.model = new Model(modelName);
+    this.animationSpeed = 1;
+    this.model = new Model(modelName, this);
     this.name = name;
     this.passiveAbilities = [];
     this.activeAbilities = [];
@@ -23,7 +24,7 @@ export default class Actor {
   update() {
     CONTEXT.beginPath();
     CONTEXT.arc(this.x, this.y, this.collisionRadius, 0, 2 * Math.PI);
-    CONTEXT.fillStyle = "red";
+    CONTEXT.fillStyle = 'red';
     CONTEXT.fill();
     this.model.animate();
   }
