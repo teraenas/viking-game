@@ -12,18 +12,17 @@ const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'white';
 
 const player = new Player({
-  position: { x: 300, y: 400 },
+  position: { x: 325, y: 400 },
   collisionRadius: 40,
   textureScale: 0.55,
-  modelName: 'viking-1',
+  modelName: 'viking-3',
   name: 'Nechifor',
 });
-
-console.log(player);
 
 function updateWorld() {
   player.update();
 }
+
 function drawWorld() {}
 
 function loop(delta) {

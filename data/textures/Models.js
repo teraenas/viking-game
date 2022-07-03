@@ -18,15 +18,14 @@ export default class Model {
   set animation(value) {
     this.currentAnimation = value;
   }
-
   animate() {
-    this.frameInterval = this.getFrameInterval(this.currentAnimation); // Actively update the frame interval if ownwe animations speed changes
+    this.frameInterval = this.getFrameInterval(this.currentAnimation); // Actively update the frame interval if owner animation speed changes
     CONTEXT.drawImage(
       this.sprites[this.currentAnimation].sprite,
       this.currentAnimationFrame * this.sprites[this.currentAnimation].size,
       0,
-      512,
-      512,
+      this.sprites[this.currentAnimation].size,
+      this.sprites[this.currentAnimation].size,
       this.owner.x -
         (this.sprites[this.currentAnimation].size * this.owner.textureScale) /
           2,
